@@ -1,0 +1,26 @@
+.dashboard {
+    background-color: #f5f5f5; /* Background color of the dashboard */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.top-items {
+    display: flex;
+    justify-content: space-around; /* Center items horizontally with equal space between them */
+    align-items: center; /* Center items vertically */
+    background-color: #fff; /* Background color of the top items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    padding: 10px 0; /* Add padding for better spacing */
+}
+
+.top-items a {
+    color: #333; /* Text color of the items */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding around text */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.top-items a:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+}

@@ -1,0 +1,10 @@
+.header {
+    text-align: center; /* Center align the title */
+    padding: 20px 0; /* Add padding for spacing */
+    background-color: #76abb3; /* Background color */
+    color: white; /* Text color */
+}
+
+.title {
+    margin: 0; /* Remove default margin */
+}
