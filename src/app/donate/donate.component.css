@@ -1,0 +1,93 @@
+/* card-list.component.css */
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the block horizontally */
+    gap: 20px;
+    padding: 0 20px; /* Add padding to the sides */
+    margin: 0 auto; /* Center the block horizontally */
+    max-width: 1700px; /* Set a maximum width for the block */
+  }
+  
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card .card-details {
+    padding: 16px;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+ /* card-list.component.css */
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination span {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Add some space between the button and the card list */
+}
+

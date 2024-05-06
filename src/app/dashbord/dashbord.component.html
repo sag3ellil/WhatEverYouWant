@@ -1,9 +1,16 @@
 <div class="dashboard">
     <div class="top-items">
-        <a routerLink="/dashboard/donate" routerLinkActive="active">Donate</a>
-        <a routerLink="/dashboard/lost-found" routerLinkActive="active">Lost & Found</a>
-        <a routerLink="/dashboard/services" routerLinkActive="active">Services</a>
-        <a routerLink="/dashboard/buy" routerLinkActive="active">Buy</a>
-        <a routerLink="/dashboard/sell" routerLinkActive="active">Sell</a>
+        <a  id="title-donate"  (click)="activateComp('1')">Donate</a>
+        <a  id="title-lost-found"(click)="activateComp('2')">Lost & Found</a>
+        <a id="title-services" (click)="activateComp('3')">Services</a>
+        <a  id="title-buy" (click)="activateComp('4')">Buy</a>
+        <a  id="title-sell" (click)="activateComp('5')">Sell</a>
     </div>
+
+
 </div>
+<app-donate id="1" style="display: block;"></app-donate>
+<app-lost-found id="2" style="display: none;"></app-lost-found>
+<app-services id="3" style="display: none;"></app-services>
+<app-buy id="4" style="display: none;"></app-buy>
+<app-sell id="5" style="display: none;"></app-sell>

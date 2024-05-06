@@ -1,4 +1,24 @@
-<div class="header">
-    <h1 class="title">Whatever You Want</h1>
+<div class="header" >
+    <h1 class="title" >Whatever You Want</h1>
+   
 </div>
-<router-outlet></router-outlet>
+
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="login-option" *ngIf="isConnected">
+            <a routerLink="login" routerLinkActive="active"> <i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+        <div class="login-option" *ngIf="!isConnected">
+            <a routerLink="profile" routerLinkActive="active">Bouraoui Ziche</a>
+        </div>
+        
+      <!-- Your main content here -->
+      <!-- For example, the card-list component -->
+    <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+    <div class="copyright">
+        &copy; 2024 Bouraoui Ziche. All rights reserved.
+    </div>
+</footer>

@@ -24,3 +24,7 @@
 .top-items a:hover {
     background-color: #f0f0f0; /* Background color on hover */
 }
+
+#title-donate {
+    background-color:rgb(164, 189, 211)
+}

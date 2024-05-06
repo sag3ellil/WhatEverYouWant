@@ -1,1 +1,19 @@
-<p>lost-found works!</p>
+<div class="button-container"><button (click)="add()">Add item</button></div>
+<div class="card-list">
+    <div class="card" *ngFor="let card of paginatedCards">
+      <img [src]="card.imageUrl" alt="Object Image">
+      <div class="card-details">
+        <h3>{{ card.name }}</h3>
+        <p>Status: {{ card.status }}</p>
+        <p>Location: {{ card.location }}</p>
+        <p>date: {{ card.date }}</p>
+      </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+    <button (click)="previousPage()">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button (click)="nextPage()">Next</button>
+  </div>

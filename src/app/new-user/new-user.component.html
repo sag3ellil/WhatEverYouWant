@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Create New User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <input type="email" formControlName="email" placeholder="Email" required>
+      <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" required>
+      <input type="text" formControlName="name" placeholder="Name" required>
+      <input type="password" formControlName="password" placeholder="Password" required>
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required>
+      <button type="submit" [disabled]="userForm.invalid">Create User</button>
+    </form>
+  </div>
+  

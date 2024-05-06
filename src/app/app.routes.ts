@@ -6,12 +6,17 @@ import { LostFoundComponent } from './lost-found/lost-found.component';
 import { ServicesComponent } from './services/services.component';
 import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
+import { LoginComponent } from './login/login.component';
+import { NewUserComponent } from './new-user/new-user.component';
 export const routes: Routes = [
     {path:'',component:DashbordComponent},
-    { path: 'donate', component: DonateComponent },
-    { path: 'lost-found', component: LostFoundComponent },
-    { path: 'services', component: ServicesComponent },
-    { path: 'buy', component: BuyComponent },
-    { path: 'sell', component: SellComponent },
-    { path: 'donate', redirectTo: 'donate', pathMatch: 'full' },
+    { path: 'dashboard/donate', component: DonateComponent },
+    { path: 'dashboard/lost-found', component: LostFoundComponent },
+    { path: 'dashboard/services', component: ServicesComponent },
+    { path: 'dashboard/buy', component: BuyComponent },
+    { path: 'dashboard/sell', component: SellComponent },
+    { path: 'dashboard/donate', redirectTo: 'donate', pathMatch: 'full' },
+
+    { path: 'login', component: LoginComponent },
+    { path: 'new/user', component: NewUserComponent },
     {path:'**',component:NotfoundComponent}];
