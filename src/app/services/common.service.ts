@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
+  private _dashbordComponentID="1";
   private _isConnected = false;
 
   private _idUser = null;
@@ -13,6 +14,13 @@ export class CommonService {
   private _phoneNumberUser = null;
 
   constructor() { }
+
+  public get dashbordComponentID() {
+    return this._dashbordComponentID;
+  }
+  public set dashbordComponentID(value) {
+    this._dashbordComponentID = value;
+  }
 
   public get phoneNumberUser() {
     return this._phoneNumberUser;

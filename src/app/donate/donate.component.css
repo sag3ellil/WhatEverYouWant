@@ -91,3 +91,14 @@ button:hover {
   margin-bottom: 20px; /* Add some space between the button and the card list */
 }
 
+a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+

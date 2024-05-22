@@ -1,9 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* profile.component.css */
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.container {
+  .container {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -46,4 +62,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #ccc;
     cursor: not-allowed;
   }
+  
   

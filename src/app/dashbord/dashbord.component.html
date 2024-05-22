@@ -1,16 +1,17 @@
 <div class="dashboard">
     <div class="top-items">
-        <a  id="title-donate"  (click)="activateComp('1')">Donate</a>
-        <a  id="title-lost-found"(click)="activateComp('2')">Lost & Found</a>
-        <a id="title-services" (click)="activateComp('3')">Services</a>
-        <a  id="title-buy" (click)="activateComp('4')">Buy</a>
-        <a  id="title-sell" (click)="activateComp('5')">Sell</a>
+      <a *ngFor="let component of components" 
+         [id]="'title-' + component.id" 
+         (click)="activateComp(component.id)"
+         [ngStyle]="{'background-color': component.id === componentId ? 'rgb(164, 189, 211)' : 'rgba(255, 255, 255)'}">
+        {{ component.title }}
+      </a>
     </div>
-
-
-</div>
-<app-donate id="1" style="display: block;"></app-donate>
-<app-lost-found id="2" style="display: none;"></app-lost-found>
-<app-services id="3" style="display: none;"></app-services>
-<app-buy id="4" style="display: none;"></app-buy>
-<app-sell id="5" style="display: none;"></app-sell>
+    <div style="padding: 10px;"></div>
+    <app-donate *ngIf="componentId === '1'"></app-donate>
+    <app-lost-found *ngIf="componentId === '2'"></app-lost-found>
+    <app-services *ngIf="componentId === '3'"></app-services>
+    <app-buy *ngIf="componentId === '4'"></app-buy>
+    <app-sell *ngIf="componentId === '5'"></app-sell>
+  </div>
+  

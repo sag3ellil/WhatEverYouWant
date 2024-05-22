@@ -1,0 +1,131 @@
+.item-detail {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Ensure images don't overflow the container */
+  }
+  
+  .item-detail > div {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+  }
+  
+  .item-detail h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images horizontally */
+  }
+  
+  .image-gallery img {
+    flex: 0 0 calc(33.33% - 20px); /* Adjusted width for 3 images per row with spacing */
+    max-width: 100%;
+    height: auto;
+    margin: 10px; /* Add spacing around each image */
+    border-radius: 5px; /* Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.05); /* Enlarge image slightly on hover */
+  }
+  
+  .item-detail p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+
+  .listing-apply {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-heading {
+
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Center the text */
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 20px); /* Adjusted input width */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #4CAF50;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4167d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6789ed;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  #map {
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+  }

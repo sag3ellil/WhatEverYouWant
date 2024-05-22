@@ -28,3 +28,15 @@
 #title-donate {
     background-color:rgb(164, 189, 211)
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .top-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .top-items a {
+      margin-bottom: 10px;
+    }
+  }

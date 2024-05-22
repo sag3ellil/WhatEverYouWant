@@ -1,5 +1,40 @@
 <div class="container">
-    <div class="center">
-      <button routerLink="/login">Sell your item</button>
+    <div class="center" *ngIf="!isConnected">
+      <button routerLink="/dashboard/login">Sell your item</button>
+    </div>
+    <div class="center" *ngIf="isConnected">
+      <button routerLink="/dashboard/login">List your items</button>
+      <form>
+        <div>
+            <label>Name:</label>
+            <input type="text" [(ngModel)]="itemName" name="itemName" required>
+        </div>
+        <div>
+            <label>Image:</label>
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+        <div>
+            <label>Status:</label>
+            <select [(ngModel)]="itemStatus" name="itemStatus" required>
+                <option value="available">Available</option>
+                <option value="sold">Sold</option>
+            </select>
+        </div>
+        <div>
+            <label>Price:</label>
+            <input type="number" [(ngModel)]="itemPrice" name="itemPrice" required>
+        </div>
+        <div>
+            <label>Location:</label>
+            <input type="text" [(ngModel)]="itemLocation" name="itemLocation" required>
+        </div>
+        <div>
+            <label>Date of Creation:</label>
+            <input type="date" [(ngModel)]="itemDate" name="itemDate" required>
+        </div>
+        <button type="submit" (click)="sellItem()">Submit</button>
+    </form>
+
+
     </div>
 </div>

@@ -7,6 +7,7 @@
         <p>Status: {{ card.status }}</p>
         <p>Location: {{ card.location }}</p>
         <p>date: {{ card.date }}</p>
+        <a [routerLink]="['/details', card.id]">Learn More</a>
       </div>
     </div>
 </div>

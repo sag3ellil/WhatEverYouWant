@@ -1,0 +1,29 @@
+<form [formGroup]="newItemForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nameObject">Name of Object:</label>
+      <input id="nameObject" formControlName="nameObject">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div>
+      <label for="nameOwner">Name of Owner:</label>
+      <input id="nameOwner" formControlName="nameOwner">
+    </div>
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input id="phoneNumber" formControlName="phoneNumber">
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input id="address" formControlName="address">
+    </div>
+    <div style="height: 400px;">
+      <label for="map">Location:</label>
+      <div id="map" style="height: 100%;"></div>
+    </div>
+    <div style="padding: 10px;"></div>
+    <button type="submit">Save</button>
+  </form>
+  

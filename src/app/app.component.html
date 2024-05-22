@@ -1,20 +1,27 @@
 <div class="header" >
-    <h1 class="title" >Whatever You Want</h1>
-   
+    <h1 class="title" routerLink="" >Whatever You Want</h1>
 </div>
 
 <div class="page-wrapper">
+    
     <div class="page-content">
         <div class="login-option" *ngIf="isConnected">
-            <a routerLink="login" routerLinkActive="active"> <i class="fas fa-sign-in-alt"></i> Login</a>
+            <a routerLink="dashboard/login" routerLinkActive="active"> 
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
         </div>
-        <div class="login-option" *ngIf="!isConnected">
-            <a routerLink="profile" routerLinkActive="active">Bouraoui Ziche</a>
+        <div class="login-option" *ngIf="!isConnected" (click)="toggleDropdown($event)">
+            <a >Bouraoui Ziche</a>
+            <ul *ngIf="dropdownOpen" class="dropdown-menu">
+              <li><a routerLink="dashboard/profile" routerLinkActive="active">Profile</a></li>
+              <li><a (click)="logout()">Disconnect</a></li>
+              <li><a routerLink="dashboard/cart" routerLinkActive="active">Cart</a></li>
+              <li><a routerLink="dashboard/notifications" routerLinkActive="active">Notifications</a></li>
+            </ul>
         </div>
         
-      <!-- Your main content here -->
-      <!-- For example, the card-list component -->
     <router-outlet></router-outlet>
+    <div style="padding: 20px;"></div>
 </div>
 
 <footer class="footer">

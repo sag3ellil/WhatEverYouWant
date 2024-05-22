@@ -1,0 +1,32 @@
+<div class="item-detail">
+    <button (click)="goBack()">Back</button>
+
+    <div>
+      <h2>{{ item.name }}</h2>
+      <div class="image-gallery">
+        <img *ngFor="let imageUrl of item.images" [src]="imageUrl" alt="{{ item.name }}">
+      </div>
+      <p>Status: {{ item.status }}</p>
+      <p>Phone: {{ item.phone }}</p>
+      <p>Location: {{ item.location }}</p>
+      <p>Date of Creation: {{ item.date }}</p>
+      <p>Owner Name: {{ item.ownerName }}</p>
+      <div style="height: 400px;">
+        <label for="map">Location:</label>
+        <div id="map" style="height: 100%;"></div>
+      </div>
+    </div>
+</div>
+
+  <section class="listing-apply">
+    <h2 class="section-heading">Get in touch with the owner :</h2>
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" formControlName="firstName" />
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" formControlName="lastName" />
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <button type="submit" class="primary">Apply now</button>
+    </form>
+  </section>
